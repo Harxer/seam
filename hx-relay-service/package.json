@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "WebRTC service application.",
   "repository": "not-listed",
-  "main": "RelayService.js",
+  "main": "HxRelayService.js",
   "scripts": {
     "start": "pm2 stop RelayService; pm2 start RelayService.js",
     "test": "echo \"Error: no test specified\" && exit 1"
