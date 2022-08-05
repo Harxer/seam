@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@harxer/session-manager-lib-node": "1.0.0",
+    "@harxer/session-manager-lib-node": "1.0.1",
     "csprng": "^0.1.2",
     "fs": "0.0.1-security",
     "jsonwebtoken": "^8.5.1",
