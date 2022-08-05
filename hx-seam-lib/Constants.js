@@ -1,5 +1,5 @@
 
-export const AUTH_DOMAIN = 'https://harrisonbalogh.com'
+export const AUTH_DOMAIN = 'https://www.harrisonbalogh.com'
 export const DOMAIN = 'wss://hxdev.com'
 export const RELAY_SERVER_URL = `${DOMAIN}/api/seam`
 
