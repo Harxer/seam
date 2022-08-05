@@ -1,8 +1,8 @@
 import React from 'react';
 import './seam.css';
-import * as RelayClient from 'hx-seam-lib/RelayClient'
-import * as Seam from 'hx-seam-lib/Seam'
-import { STATUS as CONNECTION_STATUS } from 'hx-seam-lib/Seam'
+import * as RelayClient from '@harxer/seam-lib/RelayClient'
+import * as Seam from '@harxer/seam-lib/Seam'
+import { STATUS as CONNECTION_STATUS } from '@harxer/seam-lib/Seam'
 import { BsFillShieldLockFill, BsArrowUpRight, BsArrowDownLeft,
   BsFillTelephonePlusFill, BsFillTelephoneXFill, BsFolderPlus, BsForwardFill, BsForward,
   BsArrowBarUp, BsArrowBarDown, BsChevronDoubleDown } from "react-icons/bs";

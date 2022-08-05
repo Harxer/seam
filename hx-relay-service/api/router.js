@@ -1,15 +1,9 @@
-const jwt = require('jsonwebtoken'),
-      Controller = require('./controller'),
+const Controller = require('./controller'),
       MsgType = Controller.MSG_TYPE,
-      fs = require('fs'),
-      // secret = JSON.parse(fs.readFileSync("key.json")).secret,
       WebSocketServer = require('ws').Server,
-      domain = require("../config.js").domain;
-      HXAuthServiceClient = require('./HXAuthServiceClient');
+      HXAuthServiceClient = require('@harxer/session-manager-lib//service_client/HxAuthServiceClientRequires');
 
 const verifyClient = (info, verified) => {
-  if (domain == "localhost") return verified(true)
-
   if (info.req.headers.cookie === undefined) {
     console.log("No JWT.")
     return verified(false, 403, 'No token provided')
@@ -24,19 +18,7 @@ const verifyClient = (info, verified) => {
     }).catch(e => {
       console.log(`${new Date()} - Failed to authenticate: ${e}`)
       verified(false, 403, 'Failed to authenticate.')
-    }); // TODO
-    // jwt.verify(token, secret, function (err, decoded) {
-    //   if (err) {
-    //     console.log("Denied access to WebSocket. Invalid token.");
-    //     verified(false, 403, 'Failed to authenticate.')
-    //   } else {
-    //     info.req.decoded = decoded;
-    //     if (decoded.privilege < 0) {
-    //       verified(false, 401, 'You do not have permission to use this module.')
-    //     }
-    //     verified(true);
-    //   }
-    // })
+    });
   }
 }
 
