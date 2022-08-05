@@ -1,7 +1,7 @@
 const Controller = require('./controller'),
       MsgType = Controller.MSG_TYPE,
       WebSocketServer = require('ws').Server,
-      HXAuthServiceClient = require('@harxer/session-manager-lib//service_client/HxAuthServiceClientRequires');
+      HXAuthServiceClient = require('@harxer/session-manager-lib-node');
 
 const verifyClient = (info, verified) => {
   if (info.req.headers.cookie === undefined) {
