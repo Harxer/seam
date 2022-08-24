@@ -1,13 +1,13 @@
 # Seam monorepo
 
-## hx-relay-service
+## service
 
   Relay service for client to client peer discovery and RTC negotiation.
 
-## hx-seam-client
+## client
 
   Client web application.
 
-## hx-seam-lib
+## lib
 
-  Seam protocol library for client applications.
+  Seam protocol library for client applications. Deployed to GitHub Harxer/seam repo.
