@@ -1,6 +1,6 @@
 {
   "name": "@harxer/seam-lib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "Constants.js",
   "repository": "git://github.com:harxer/seam.git"
 }
