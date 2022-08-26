@@ -1,0 +1,63 @@
+#header {
+  /* height: 20px; */
+}
+
+#header-title, #header-version {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+#header-title {
+  color: var(--color-tonic);
+  margin-left: 4px;
+}
+
+#header-guid-container {
+  float: right;
+}
+
+#header-guid-container > .connect {
+  margin-top: 6px;
+  vertical-align: top;
+}
+#header-guid-container > .connect:hover {
+  background-color: var(--color-dominant);
+  box-shadow: 0 0 0 2px var(--color-dominant);
+}
+
+#header-guid-container > .connect.off {
+  background-color: grey;
+  box-shadow: 0 0 0 2px grey;
+  color: var(--color-foreground);
+}
+#header-guid-container > .connect.off:hover {
+  background-color: lightgrey;
+  box-shadow: 0 0 0 2px lightgrey;
+}
+
+#header-guid-container > .connectionIcon {
+  background: url('../../../public/images/icon_profile_outline_dark@2x.png') no-repeat center/contain;
+  display: inline-block;
+  height: 22px;
+  margin: 7px 8px 0 0;
+  vertical-align: top;
+  width: 22px;
+}
+#header-guid-container > .connectionIcon.connected {
+  background: url('../../../public/images/icon_profile_filled_dark@2x.png') no-repeat center/contain;
+}
+
+#header-guid-container > .guidLabel {
+  display: inline-block;
+  color: grey;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  text-decoration: line-through;
+}
+
+#header-guid-container > .guidLabel.connected {
+  color: var(--color-background);
+  text-decoration: none;
+}

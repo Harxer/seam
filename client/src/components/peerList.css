@@ -1,0 +1,113 @@
+#peerList {
+  border-radius: 6px;
+  box-shadow: 5px 0 0 0 var(--color-foreground);
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  z-index: 1;
+}
+
+#peerList > .title {
+  background-color: var(--color-background);
+  border-radius: 6px 6px 0 0;
+  color: var(--color-foreground);
+  flex: none;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+#peerList > .no-peers-label {
+  background-color: lightgray;
+  color: gray;
+  flex-grow: 1;
+  font-style: italic;
+  margin: 2px 0;
+  padding: 10px 16px;
+  text-align: center;
+}
+
+#peerList > .list {
+  background-color: lightgray;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#peerList > .list::-webkit-scrollbar {
+  display: none;
+}
+
+#peerList > .list li {
+  background-color: var(--color-accent-backup);
+  cursor: pointer;
+  display: flex;
+  margin: 2px 0;
+  padding: 6px 10px;
+  text-align: left;
+}
+#peerList > .list li:hover p {
+  text-decoration: underline;
+}
+
+#peerList > .list li.selected {
+  background-color: var(--color-mediant);
+}
+#peerList > .list li .peerIcon {
+  background: url('../../public/images/icon_profile_outline_light@2x.png') no-repeat center/contain;
+  display: inline-block;
+  flex: none;
+  margin: 5px;
+  padding: 0;
+  position: relative;
+  height: 18px;
+  width: 18px;
+}
+#peerList > .list li .peerIcon.selected {
+  background: url('../../public/images/icon_profile_filled_light@2x.png') no-repeat center/contain;
+}
+
+#peerList > .list li .peerIcon .notification {
+  background-color: red;;
+  display: none;
+  border-radius: 50%;
+  height: 8px;
+  position: absolute;
+  left: -10px;
+  top: 4px;
+  width: 8px;
+}
+#peerList > .list li .peerIcon .notification.enabled {
+  display: inline-block;
+}
+
+#peerList > .list li p {
+  color: var(--color-foreground);
+  display: inline-block;
+  flex: 1 0;
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+#peerList > .divider-bottom {
+  background-color: var(--color-background);
+  border-radius: 0 0 6px 6px;
+  flex: none;
+  height: 12px;
+}
+
+#peerList > .list li.stale {
+  background-color: grey;
+}
+#peerList > .list li.stale p {
+  font-style: italic;
+  text-decoration: line-through;
+}

@@ -1,12 +1,13 @@
 :root {
   --color-background:       rgb(44,54,64);
-  --color-background-light: rgb(166, 178, 189);
+  --color-background-dark:  rgb(61, 71, 78);
+  --color-background-light: rgb(102, 113, 126);
   --color-foreground:       rgb(255,255,255);
   /* 234,236,238 */
   --color-text:             rgb(234,236,238);
   --color-tonic:            rgb(0,102,153);
-  --color-mediant:          rgb(0,119,180);
-  --color-dominant:         rgb(51,153,204);
+  --color-mediant:          rgb(55, 134, 173);
+  --color-dominant:         rgb(67, 191, 253);
   --color-accent:           rgb(255,204,51);
   --color-accent-backup:    rgb(72,88,104);
 
@@ -20,10 +21,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
+  background-color: var(--color-foreground);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p.button {
+  background-color: var(--color-mediant);
+  border: 1px solid var(--color-foreground);
+  box-shadow: 0 0 0 2px var(--color-mediant);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--color-foreground);
+  display: inline-block;
+  margin: 0 10px;
+  padding: 2px 10px;
+}
+p.button:hover {
+  background-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+p.button.disabled {
+  background-color: grey;
+  box-shadow: 0 0 0 2px grey;
+}
+p.button.disabled {
+  background-color: lightgray;
+  box-shadow: 0 0 0 2px lightgray;
 }
