@@ -1,7 +1,8 @@
 const Controller = require('./controller'),
       MsgType = Controller.MSG_TYPE,
       WebSocketServer = require('ws').Server,
-      HXAuthServiceClient = require('@harxer/session-manager-lib-node');
+      HXAuthServiceClient = require('@harxer/session-manager-lib-node')
+      Config = require('../config.js');
 
 const verifyClient = (info, verified) => {
   if (info.req.headers.cookie === undefined) {
@@ -13,7 +14,7 @@ const verifyClient = (info, verified) => {
     console.log("Denied access to WebSocket. No token provided.");
     verified(false, 403, 'No token provided.');
   } else {
-    HXAuthServiceClient.validate(token).then(_ => {
+    HXAuthServiceClient.validate(Config.url.auth, token).then(_ => {
       verified(true);
     }).catch(e => {
       console.log(`${new Date()} - Failed to authenticate: ${e}`)

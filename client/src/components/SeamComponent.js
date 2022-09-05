@@ -7,7 +7,7 @@ import { BsFillShieldLockFill, BsArrowUpRight, BsArrowDownLeft,
   BsFillTelephonePlusFill, BsFillTelephoneXFill, BsFolderPlus, BsForwardFill, BsForward,
   BsArrowBarUp, BsArrowBarDown, BsChevronDoubleDown } from "react-icons/bs";
 
-import { AUTH_DOMAIN } from '@harxer/seam-lib';
+import Config from '../config.js';
 import { validateSession, invalidateSession } from '@harxer/session-manager-lib';
 import Login from './Login';
 
@@ -38,7 +38,7 @@ class SeamComponent extends React.Component {
   }
 
   componentDidMount() {
-    validateSession(AUTH_DOMAIN).then(_ => this.handleLogin()).catch(_ => {})
+    validateSession(Config.url.auth).then(_ => this.handleLogin()).catch(_ => {})
   }
 
   handleLogin() {
